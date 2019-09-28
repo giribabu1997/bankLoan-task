@@ -1,11 +1,18 @@
 .cnt{
     margin-top:50px;
+    background-color: #f8f9f9;
   }
   
   body{
     font-family: 'Open Sans', sans-serif;
   }
-  
+
+  .text-info {
+    color: blue !important;
+    font-size: 25px;
+    text-align: center;
+    text-decoration-line: underline;
+}
   .val-sz{
     font-weight: 500;
   }
@@ -20,6 +27,12 @@
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
   }
+  .rangeslider-horizontal .rangeslider__fill {
+    height: 100%;
+    background-color: #c279da;
+    border-radius: 10px;
+    top: 0;
+  }
   
   .rangeslider-horizontal .rangeslider__handle:after{
     height: 13px;
@@ -27,7 +40,7 @@
   }
   
   .months-selector .rangeslider-horizontal .rangeslider__fill{
-     background-color: blue
+     background-color: cornflowerblue;
   }
   .rangeslider, .rangeslider .rangeslider__fill{
     box-shadow: none

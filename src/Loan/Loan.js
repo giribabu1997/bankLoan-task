@@ -56,7 +56,7 @@ export default class Loan extends Component {
                 onChangeStart={this.handleChangeStart}
                 onChange={this.handleChangeAmount}
                 onChangeComplete={this.handleChangeComplete} />
-                
+
               <div className="row total-val">
                 <div className="col-md-4">{min}$</div>
                 <div className="col-md-4 text-center text-primary val-sz">{amountValue ? `${amountValue}$` : ''}</div>
@@ -69,7 +69,7 @@ export default class Loan extends Component {
         <div className="row months-selector mt-5">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            <h6 className="text-info">Please select the duration</h6>
+            <h6 className="text-info">Select your months</h6>
             <div className='slider'>
               <Slider min={monthsMin}
                       max={monthsMax}
@@ -80,7 +80,7 @@ export default class Loan extends Component {
 
               <div className="row total-val">
                 <div className="col-md-4">{monthsMin} months</div>
-                <div className="col-md-4 text-center text-warning val-sz">{monthsSelected ? `${monthsSelected} months` : ''}</div>
+                <div className="col-md-4 text-center text-primary val-sz">{monthsSelected ? `${monthsSelected} months` : ''}</div>
                 <div className="col-md-4 text-right">{monthsMax} months</div>
               </div>
 
@@ -104,14 +104,14 @@ export default class Loan extends Component {
                     <p>Months Duration: <strong className="text-info">{myloan.numPayments}</strong></p>
                   </div>
                   <div className="col-md-6 text-left">
-                    <p>Interest Rate: <strong className="text-success">{myloan.interestRate}%</strong></p>
+                    <p>Interest Rate: <strong className="text-warning">{myloan.interestRate}%</strong></p>
                     <p>Monthly Payment: <strong className="text-danger">{myloan.monthlyPayment.amount}$</strong></p>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-md-12">
                     <span className="text-info">
-                      Total Amount need to pay <strong className="text-success">{myloan.numPayments * myloan.monthlyPayment.amount} $</strong>
+                      Total Amount to pay <strong className="text-success">{myloan.numPayments * myloan.monthlyPayment.amount} $</strong>
                     </span>
                   </div>
 
